@@ -16,7 +16,7 @@ exports.getAllProduct = async (req,res,next) =>{
 exports.updateProduct = async (req,res,next) =>{
     const {title,price,description,imageUrl} = req.body;
     const productId = req.params.productId;
-    const p = new Product(title,price,description,imageUrl,productId);
+    const p = new Product(title,price,description,imageUrl,productId,"668297c6e388b1c8d467593c");
     const result = await p.save();
     res.status(200).json({message : result});
 }
