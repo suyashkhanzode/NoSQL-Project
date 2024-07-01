@@ -8,4 +8,6 @@ route.post('/add-product',adminController.addProduct);
 
 route.get('/get-product',adminController.getAllProduct);
 
+route.put('/update-product/:productId',adminController.updateProduct)
+
 module.exports = route;
