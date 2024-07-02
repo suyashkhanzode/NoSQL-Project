@@ -33,3 +33,9 @@ exports.deleteFromCart = async (req,res,next) =>{
     const result = await user.deleteCartItem(productId);
     res.status(201).json({message : result})
 }
+
+exports.addOrder = async (req,res,next) =>{
+    const user = await User.findByUserId('6683b3a8e85685dc120bdf15');
+    const result = await user.addOrder();
+    res.status(200).json({message : result})
+}

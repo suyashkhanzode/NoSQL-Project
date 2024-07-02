@@ -12,6 +12,8 @@ route.post('/add-to-cart/:productId',shopController.addToCart)
 
 route.get('/get-cart',shopController.getCartItems)
 
-route.delete('/delete-cart/:productId')
+route.delete('/delete-cart/:productId',shopController.deleteFromCart)
+
+route.post('/add-order',shopController.addOrder);
 
 module.exports = route;
