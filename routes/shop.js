@@ -8,4 +8,10 @@ route.get('/get-product',shopController.getAllProducts);
 
 route.get('/get-product/:productId',shopController.getProductById);
 
+route.post('/add-to-cart/:productId',shopController.addToCart)
+
+route.get('/get-cart',shopController.getCartItems)
+
+route.delete('/delete-cart/:productId')
+
 module.exports = route;
